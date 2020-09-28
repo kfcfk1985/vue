@@ -9,7 +9,10 @@
       <router-link :to="{name:'About'}">About</router-link> | 
 
       <!-- 2.E 动态路由 -->
-      <router-link :to="{name:'Book',params:{id:123}}">book</router-link>
+      <router-link :to="{name:'Book',params:{id:123}}">book</router-link> | 
+
+      <!-- 2.F 参数属性传递 -->
+      <router-link :to="{name:'Car',params:{id:888}}">car</router-link>
     </div>
     <router-view/>
   </div>

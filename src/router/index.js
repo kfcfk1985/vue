@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Book from '../views/Book.vue'
+import Car from '../views/Car.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,12 @@ const routes = [
     path: '/book/:id',    //2.E 动态路由
     name: 'Book',
     component: Book
+  },
+  {
+    path: '/car/:id',    
+    props:true,         //2.F 参数属性传递
+    name: 'Car',
+    component: Car
   },
   {
     path: '/about',     
