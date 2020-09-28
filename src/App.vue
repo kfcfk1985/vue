@@ -4,7 +4,9 @@
 
       <!-- 导航的使用 -->
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+
+      <!-- 命名路由的使用 -->
+      <router-link :to="{name:'About'}">About</router-link>
     </div>
     <router-view/>
   </div>
