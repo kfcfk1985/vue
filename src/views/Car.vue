@@ -1,6 +1,10 @@
 <template>
  <div>
-      this is car page for id : {{id}}
+      <p>this is car page for id : {{id}}</p>
+
+      <!-- 2.G 路由嵌套 -->
+      <router-view></router-view>    
+
  </div>
 </template>
 
