@@ -6,7 +6,10 @@
       <router-link to="/">Home</router-link> |
 
       <!-- 命名路由的使用 -->
-      <router-link :to="{name:'About'}">About</router-link>
+      <router-link :to="{name:'About'}">About</router-link> | 
+
+      <!-- 2.E 动态路由 -->
+      <router-link :to="{name:'Book',params:{id:123}}">book</router-link>
     </div>
     <router-view/>
   </div>
