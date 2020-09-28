@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <p>{{ value }}</p>
 
     <div class="element-container">
       <h3>Element表单</h3>
@@ -25,21 +24,20 @@
     </div>
 
     <div class="tony-container">
-      <h3>tony 封装的 组件</h3>
-      <t-input v-model="value"></t-input>
+      <tony-form></tony-form>
     </div>
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import TInput from "./components/Input.vue";
+import TonyForm from "./components/TonyForm/index.vue";
 
 export default {
   name: "app",
   data() {
     return {
-      value: "",
+     
       model: { username: "tom", password: "" },
       rules: {
         username: [
@@ -51,7 +49,7 @@ export default {
     };
   },
   components: {
-    TInput,
+    TonyForm,
   },
   methods: {
     submitForm(form) {

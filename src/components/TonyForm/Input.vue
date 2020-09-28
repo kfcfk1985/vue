@@ -1,6 +1,6 @@
 
 <template>
-  <input :type="type" :value="value" @input="onInput" />
+  <input :type="type" :value="value" @input="onInput" :style="styleObj" />
 </template>
 
 <script>
@@ -24,6 +24,20 @@ export default {
       console.log("你输入了:", e);
       let value = e.target.value;
       this.$emit("input", value);
+      this.$parent.$emit("validator");
+    },
+  },
+  computed: {
+    styleObj() {
+      if (this.$parent.errorStatus == true) {
+        return {
+          border: "1px solid red",
+        };
+      } else {
+        return {
+          // border: "none",
+        };
+      }
     },
   },
 };
