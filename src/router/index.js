@@ -45,7 +45,14 @@ const routes = [{
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import( /* webpackChunkName: "about" */ '../views/About.vue'),
+    
+    /* 2.I 导航守卫 << start */
+    beforeEnter: (to, from, next) => {
+      console.log("this is:路由独享守卫 before enter")
+      next();
+    }
+    /* 2.I 导航守卫 >> end*/
   }
 ]
 
@@ -54,5 +61,23 @@ const router = new VueRouter({
                    //因此路由配置的时候建议用history的方式。
   routes
 })
+
+
+/* 2.I 导航守卫 << start */
+router.beforeEach((to, from, next) => {
+  console.log("\n\r\n\rthis is:全局守卫 before Each")
+  next();
+})
+router.beforeResolve((to, from, next) => {
+  console.log("this is:全局守卫 before resolve")
+  next();
+})
+router.afterEach((to, from) => {
+  console.log("this is:全局守卫 after each")
+  
+})
+/* 2.I 导航守卫 >> end*/
+
+
 
 export default router
