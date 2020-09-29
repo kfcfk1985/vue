@@ -50,8 +50,8 @@ const routes = [{
 ]
 
 const router = new VueRouter({
-  mode: "history", //路由若使用哈希（hash）的方式，是不利于网站的营销推广的（ICU），
-  //因此路由配置的时候建议用history的方式。
+  mode: "history", //路由若使用哈希（hash）的方式，是不利于网站的营销推广的（SEO），
+                   //因此路由配置的时候建议用history的方式。
   routes
 })
 
