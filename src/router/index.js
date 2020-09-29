@@ -45,6 +45,7 @@ const routes = [{
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
+    // 2.K 异步组件，可以实现按需加载，webpack会单独打包，这是提高性能速度的一种方法。
     component: () => import( /* webpackChunkName: "about" */ '../views/About.vue'),
     
     /* 2.I 导航守卫 << start */
