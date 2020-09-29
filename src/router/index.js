@@ -17,7 +17,10 @@ const routes = [{
   {
     path: '/home',
     name: 'Home',
-    component: Home
+    components: {       //2.H 命名视图
+      default:Home,     //默认视图显示的组件
+      side:CarChild1    //命名视图显示的组件
+    }
   },
   {
     path: '/book/:id', //2.E 动态路由

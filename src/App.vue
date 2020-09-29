@@ -14,7 +14,14 @@
       <!-- 2.F 参数属性传递 -->
       <router-link :to="{name:'Car',params:{id:888}}">car</router-link>
     </div>
-    <router-view/>
+
+     
+     <router-view></router-view>
+
+     <!-- 2.H 命名视图 -->
+     <router-view name="side"></router-view>
+
+   
   </div>
 </template>
 
