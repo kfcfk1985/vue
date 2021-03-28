@@ -12,7 +12,7 @@
       <router-link :to="{name:'Book',params:{id:123}}">book</router-link> | 
 
       <!-- 2.F 参数属性传递 -->
-      <router-link :to="{name:'Car',params:{id:888}}">car</router-link>
+      <router-link :to="`/car/${888}/child1`">car</router-link>
     </div>
 
      
