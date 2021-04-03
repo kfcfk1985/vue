@@ -3,13 +3,20 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Book from '../views/Book.vue'
 import Car from '../views/Car.vue'
+
 import CarChild1 from '../views/CarChild1.vue'
 
 
 
 Vue.use(VueRouter)
 
-const routes = [{
+const routes = [,
+  {
+    //2.L 通配符：适合做404页面路由
+    path: '*',
+    component:()=>import('../views/404.vue')
+  },
+  {
     path: '/',
     name: 'index',
     redirect: '/home' //重定向的使用
