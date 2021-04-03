@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Book from '../views/Book.vue'
 import Car from '../views/Car.vue'
+import Course from '../views/Course.vue'
+import CourseDetail from '../views/CourseDetail.vue'
 
 import CarChild1 from '../views/CarChild1.vue'
 
@@ -61,7 +63,20 @@ const routes = [,
       next();
     }
     /* 2.I 导航守卫 >> end*/
-  }
+  },
+
+  //2.N 组件复用时的注意事项
+  {
+    path: '/course',
+    name: 'Course',
+    component: Course,
+    children: [{
+      path: 'detail/:name',
+      props:true,
+      component: CourseDetail,
+      name:"CourseDetail"         //使用name，更便捷（不用写长的路径
+    }]
+  },
 ]
 
 const router = new VueRouter({

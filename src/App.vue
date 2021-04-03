@@ -12,7 +12,15 @@
       <router-link :to="{name:'Book',params:{id:123}}">book</router-link> | 
 
       <!-- 2.F 参数属性传递 -->
-      <router-link :to="`/car/${888}/child1`">car</router-link>
+      <router-link :to="`/car/${888}/child1`">car</router-link> 
+
+
+      <p>
+        <!-- 2.N 组件复用时的注意事项 -->
+        <router-link :to="{name:`CourseDetail`,params:{name:'web'}}">course:web</router-link> | 
+        <router-link :to="{name:`CourseDetail`,params:{name:'java'}}">course:java</router-link>
+      </p>
+
     </div>
 
      
