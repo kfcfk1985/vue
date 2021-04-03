@@ -13,7 +13,7 @@ export default {
      },    
      created(){
           // 2.E 动态路由
-          console.log("this.$router",this.$route)
+          console.log("this.$route",this.$route)
           this.id = this.$route.params.id;
      }
 }
