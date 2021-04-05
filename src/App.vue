@@ -21,6 +21,12 @@
         <router-link :to="{name:`CourseDetail`,params:{name:'java'}}">course:java</router-link>
       </p>
 
+
+      <p>
+        <!-- 2.O 获取数据的时机：路由导航前 -->
+        <router-link :to="{name:`BikeDetail`,params:{name:'yichi'}}">bike:yichi</router-link> | 
+        <router-link :to="{name:`BikeDetail`,params:{name:'fenghuang'}}">bike:fenghuang</router-link>
+      </p>
     </div>
 
      

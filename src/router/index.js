@@ -3,10 +3,14 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Book from '../views/Book.vue'
 import Car from '../views/Car.vue'
+
+import CarChild1 from '../views/CarChild1.vue'
+
 import Course from '../views/Course.vue'
 import CourseDetail from '../views/CourseDetail.vue'
 
-import CarChild1 from '../views/CarChild1.vue'
+import Bike from '../views/Bike.vue'
+import BikeDetail from '../views/BikeDetail.vue'
 
 
 
@@ -77,6 +81,18 @@ const routes = [,
       name:"CourseDetail"         //使用name，更便捷（不用写长的路径
     }]
   },
+    //2.O 获取数据的时机：路由导航前
+    {
+      path: '/bike',
+      name: 'Bike',
+      component: Bike,
+      children: [{
+        path: 'bike/:name',
+        props:true,
+        component: BikeDetail,
+        name:"BikeDetail"         //使用name，更便捷（不用写长的路径
+      }]
+    },
 ]
 
 const router = new VueRouter({

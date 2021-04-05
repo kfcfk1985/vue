@@ -1,5 +1,5 @@
 <template>
-  <h1>this is course detail:{{ name }}</h1>
+  <h1>detail:{{ name }}</h1>
 </template>
 
 <script>
