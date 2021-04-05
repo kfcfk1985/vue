@@ -2,6 +2,8 @@
   <div id="app">
     <div id="nav">
 
+      
+    
       <!-- 导航的使用 -->
       <router-link to="/">Home</router-link> |
 
@@ -28,7 +30,16 @@
         <router-link :to="{name:`BikeDetail`,params:{name:'fenghuang'}}">bike:fenghuang</router-link>
       </p>
     </div>
+      
+      <!-- 2.P：动态路由 -->
+       <p>
+        <router-link :to="{name:`Login`}">Login</router-link> 
+      </p>
 
+
+      <p v-if="isLogin">
+        <router-link :to="{name:`Admin`}">Admin</router-link> 
+      </p>
      
      <router-view></router-view>
 
@@ -39,6 +50,23 @@
   </div>
 </template>
 
+
+
+<script>
+
+export default{
+  provide() {
+    return {
+      AppVm: this
+    }
+  },
+  data() {
+    return {
+      isLogin: false
+    }
+  },
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
