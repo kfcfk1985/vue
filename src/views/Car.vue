@@ -10,6 +10,7 @@
 
 <script>
 export default {
+     name:'Car',
      props:['id'],       //2.F 参数属性传递
      data() {
           return {
@@ -17,7 +18,13 @@ export default {
           }
      },    
      created(){
-        
+        console.log('Car page created');
+     },
+     activated(){
+           console.log('Car page activated');
+     },
+     deactivated(){
+           console.log('Car page deactivated');
      }
 }
 </script>

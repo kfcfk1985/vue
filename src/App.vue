@@ -41,7 +41,10 @@
         <router-link :to="{name:`Admin`}">Admin</router-link> 
       </p>
      
-     <router-view></router-view>
+     <!-- 2.Q:	使用keep-alive实现路由组件缓存 -->
+     <keep-alive :include="['Car']">
+       <router-view></router-view>
+     </keep-alive>
 
      <!-- 2.H 命名视图 -->
      <router-view name="side"></router-view>
